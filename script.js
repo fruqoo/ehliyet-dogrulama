@@ -210,7 +210,7 @@ function initSlides() {
   }
 
   // Otomatik 1 ve 2
-  slideTimer = setTimeout(()=> showSlide(1), 10000); // Slayt 2
+  slideTimer = setTimeout(()=> showSlide(1), 5000); // Slayt 2
   setTimeout(()=> showSlide(2), 20000); // Slayt 3 Blog (manuel)
   setTimeout(()=> showSlide(3), 30000); // Slayt 4 Test (manuel)
 }
@@ -322,3 +322,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   if($id('blogList')) loadBlogPosts();
   if(document.querySelectorAll('.slide-card').length) initSlides();
 });
+
