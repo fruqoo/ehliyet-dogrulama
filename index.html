@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Hakkında</title>
+<title>Ehliyet Doğrulama - Ana Sayfa</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -11,7 +11,7 @@
 <header>
   <div style="display:flex;align-items:center;gap:10px;">
     <img src="logo.png" alt="Logo" style="height:32px;width:32px;border-radius:8px;">
-    <h1>Hakkında</h1>
+    <h1>Ehliyet Doğrulama</h1>
   </div>
   <nav>
     <button onclick="window.location.href='index.html'">Ana Sayfa</button>
@@ -21,8 +21,20 @@
 </header>
 
 <main class="container">
-  <h2>Bu site ne için?</h2>
-  <p>Türkiye'de ehliyet yaşını hesaplamanızı sağlar. Tebrik, blog ve mini test özellikleri içerir. Admin modu ile blogları yönetebilirsiniz.</p>
+  <label for="birthDate">Doğum Tarihinizi Girin</label>
+  <input id="birthDate" type="date" />
+
+  <div style="display:flex;gap:10px;margin-top:10px;">
+    <button class="primary" onclick="calculateLicense()">Ehliyet Alabilir miyim?</button>
+    <button class="secondary" onclick="clearDate()">Temizle</button>
+  </div>
+
+  <div id="output" style="margin-top:18px;font-size:16px;"></div>
+
+  <!-- Progress bar -->
+  <div id="progressContainer" class="progress-container hidden" aria-hidden="true" style="margin-top:18px;">
+    <div id="progressBar" class="progress-bar" style="width:0%"></div>
+  </div>
 </main>
 
 <footer style="text-align:center;margin:18px 0;">

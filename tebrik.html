@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tebrikler!</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <img src="logo.png" alt="Logo" style="height:32px;width:32px;border-radius:8px;">
+    <h1>Ehliyet Doğrulama</h1>
+  </div>
+  <nav>
+    <button onclick="window.location.href='index.html'">Ana Sayfa</button>
+    <button onclick="window.location.href='blog.html'">Blog</button>
+    <button onclick="window.location.href='about.html'">Hakkında</button>
+  </nav>
+</header>
+
+<main class="container">
+  <div id="slideWrapper">
+    <!-- 1. Slayt -->
+    <div class="slide-card active rgb">DOSTUM — TEBRİKLER! Ehliyet Yaşın Geldi!</div>
+
+    <!-- 2. Slayt -->
+    <div class="slide-card">
+      <h3>Trafik Kuralları</h3>
+      <ul style="text-align:left;margin-left:18px;">
+        <li>Kırmızı ışıkta dur.</li>
+        <li>Hız limitlerine uy.</li>
+        <li>Emniyet kemerini tak.</li>
+      </ul>
+    </div>
+
+    <!-- 3. Slayt (Blog tercihi) -->
+    <div class="slide-card">
+      <h3>Blog'a yazı eklemek ister misin?</h3>
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:12px;">
+        <button class="primary" onclick="blogYes()">Evet</button>
+        <button class="secondary" onclick="blogNo()">Hayır, teşekkürler</button>
+      </div>
+    </div>
+
+    <!-- 4. Slayt (Mini Test tercihi) -->
+    <div class="slide-card">
+      <h3>Mini Test'e katılmak ister misin?</h3>
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:12px;">
+        <button class="primary" onclick="testYes()">Evet</button>
+        <button class="secondary" onclick="testNo()">Hayır, teşekkürler</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer style="text-align:center;margin:18px 0;">
+  <div id="currentTime" style="cursor:pointer;color:#555;"></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
